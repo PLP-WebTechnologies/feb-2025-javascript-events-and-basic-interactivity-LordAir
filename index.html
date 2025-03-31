@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Interactive JavaScript Demo</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <header>
+        <h1>JavaScript Interactive Demo</h1>
+    </header>
+
+    <main>
+        <!-- Interactive Counter -->
+        <section class="widget">
+            <h2>Counter</h2>
+            <div class="counter-display">0</div>
+            <button id="increment-btn" class="btn">Increment</button>
+            <button id="decrement-btn" class="btn">Decrement</button>
+            <button id="reset-btn" class="btn">Reset</button>
+        </section>
+
+        <!-- Form Validation -->
+        <section class="widget">
+            <h2>Sign Up Form</h2>
+            <form id="signup-form">
+                <div class="form-group">
+                    <label for="name">Name:</label>
+                    <input type="text" id="name" required minlength="3">
+                    <div class="error-message" id="name-error"></div>
+                </div>
+                
+                <div class="form-group">
+                    <label for="email">Email:</label>
+                    <input type="email" id="email" required>
+                    <div class="error-message" id="email-error"></div>
+                </div>
+                
+                <div class="form-group">
+                    <label for="password">Password:</label>
+                    <input type="password" id="password" required minlength="6">
+                    <button type="button" id="toggle-password">👁️</button>
+                    <div class="error-message" id="password-error"></div>
+                </div>
+                
+                <button type="submit" class="btn submit-btn">Submit</button>
+            </form>
+            <div id="form-success" class="success-message hidden"></div>
+        </section>
+
+        <!-- Modal Demo -->
+        <section class="widget">
+            <h2>Modal Example</h2>
+            <button id="open-modal" class="btn">Open Modal</button>
+            <div id="demo-modal" class="modal hidden">
+                <div class="modal-content">
+                    <span class="close-modal">&times;</span>
+                    <h3>Sample Modal</h3>
+                    <p>This modal was opened with JavaScript!</p>
+                </div>
+            </div>
+        </section>
+    </main>
+
+    <script src="script.js"></script>
+</body>
+</html>
